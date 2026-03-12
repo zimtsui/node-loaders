@@ -2,7 +2,10 @@
   "name": "@zimtsui/node-loaders",
   "version": "0.0.1",
   "description": "",
-  "exports": "./build/exports.js",
+  "exports": {
+    ".": "./build/exports.js",
+    "./unhandled": "./build/unhandled.js"
+  },
   "engines": {
     "node": ">=22"
   },
