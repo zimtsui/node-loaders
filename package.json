@@ -21,12 +21,15 @@
     "url": "git+https://github.com/zimtsui/node-loaders.git"
   },
   "dependencies": {
+    "@types/node": "^24.12.2",
     "ajv": "^8.17.1",
     "env-paths": "^3.0.0",
     "yaml": "^2.8.1"
   },
   "peerDependencies": {
-    "@sinclair/typebox": "^0.34.40",
-    "@types/node": "^22.17.2"
+    "@sinclair/typebox": "^0.34.40"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3"
   }
 }
