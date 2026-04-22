@@ -7,13 +7,14 @@
     "./unhandled": "./build/unhandled.js"
   },
   "engines": {
-    "node": ">=22"
+    "node": ">=24"
   },
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc -b ./src/tsconfig.json",
-    "clean": "rm -rf ./build"
+    "clean": "rm -rf ./build",
+    "prepublishOnly": "npm run clean && npm run build"
   },
   "author": "Zim",
   "repository": {
@@ -22,14 +23,12 @@
   },
   "dependencies": {
     "@types/node": "^24.12.2",
-    "ajv": "^8.17.1",
-    "env-paths": "^3.0.0",
     "yaml": "^2.8.1"
-  },
-  "peerDependencies": {
-    "@sinclair/typebox": "^0.34.40"
   },
   "devDependencies": {
     "typescript": "^6.0.3"
+  },
+  "peerDependencies": {
+    "typebox": "^1.1.31"
   }
 }

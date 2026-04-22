@@ -1,7 +1,6 @@
 import { readFileSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
 
 
-export function loadtext(fileUrl: string | URL): string {
-	return readFileSync(fileURLToPath(fileUrl), 'utf8');
+export function loadtext(filePath: string): string {
+	return readFileSync(filePath, 'utf-8');
 }
